@@ -92,3 +92,10 @@
 #right {
 	text-align: right;
 }
+
+
+/*------------------------- 포동애비 -----------------------*/
+
+.button:hover {
+    background-color: darkgray;
+}

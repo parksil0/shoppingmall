@@ -21,9 +21,13 @@ public class goOrderlistCommand implements Command {
 		List<O_cartlistVO> cList = ProductDAO.showCartlist(userid);
 		request.setAttribute("cList", cList);
 		
+		String name = ProductDAO.viewName(userid);
+		System.out.println("사용자 이름 : " + name);
+		request.setAttribute("name", name);
+		
 		System.out.println("카트리스트 목록 : " + cList);
 		
-		return "25.Shop_cart2.jsp";
+		return "25.Shop_cart2-1.jsp";
 	}
 
 }

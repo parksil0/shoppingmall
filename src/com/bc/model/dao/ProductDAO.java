@@ -6,6 +6,8 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.bc.mybatis.DBService;
+import com.bc.vo.O_OrderVO;
+import com.bc.vo.O_arriveVO;
 import com.bc.vo.O_cartlistVO;
 import com.bc.vo.P_boardVO;
 import com.bc.vo.P_inquiryVO;
@@ -30,10 +32,24 @@ public class ProductDAO {
 		return list;
 	}
 	
+	public static List<P_inquiryVO> showInquiry2(String userid) {
+		SqlSession ss = DBService.getFactory().openSession();
+		List<P_inquiryVO> list = ss.selectList("SHOP.showInquiry2", userid);
+		ss.close();
+		return list;
+	}
+	
 	//���� ��� ����
 	public static List<P_reviewVO> showReview(String p_idx) {
 		SqlSession ss = DBService.getFactory().openSession();
 		List<P_reviewVO> list = ss.selectList("SHOP.showReview", p_idx);
+		ss.close();
+		return list;
+	}
+	
+	public static List<P_reviewVO> showReview2(String userid) {
+		SqlSession ss = DBService.getFactory().openSession();
+		List<P_reviewVO> list = ss.selectList("SHOP.showReview2", userid);
 		ss.close();
 		return list;
 	}
@@ -118,5 +134,54 @@ public class ProductDAO {
 		ss.close();
 		return result;
 	}
+	
+	public static String viewName(String userid) {
+		SqlSession ss = DBService.getFactory().openSession();
+		String name = ss.selectOne("SHOP.viewName", userid);
+		ss.close();
+		return name;
+	}
+	
+	public static int cardChk(Map<String, String>map) {
+		SqlSession ss = DBService.getFactory().openSession();
+		int result = ss.selectOne("SHOP.cardChk", map);
+		ss.close();
+		return result;
+	}
+	
+	public static int insertArrive(Map<String, String> map2) {
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.insert("SHOP.insertArrive", map2);
+		ss.close();
+		return result;
+	}
+	
+	public static int insertOrder(Map<String, String> map3) {
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.insert("SHOP.insertOrder", map3);
+		ss.close();
+		return result;
+	}
+	
+	public static O_OrderVO viewOrder(String userid) {
+		SqlSession ss = DBService.getFactory().openSession();
+		O_OrderVO ovo = ss.selectOne("SHOP.viewOrder", userid);
+		ss.close();
+		return ovo;
+	}
+	public static O_arriveVO viewOrder2(String userid) {
+		SqlSession ss = DBService.getFactory().openSession();
+		O_arriveVO ovo2 = ss.selectOne("SHOP.viewOrder2", userid);
+		ss.close();
+		return ovo2;
+	}
+	public static List<O_OrderVO> viewPoint(String userid) {
+		SqlSession ss = DBService.getFactory().openSession();
+		List<O_OrderVO> ovo = ss.selectList("SHOP.viewPoint", userid);
+		ss.close();
+		return ovo;
+	}
+	
+	
 
 }

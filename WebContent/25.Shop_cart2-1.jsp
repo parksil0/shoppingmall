@@ -86,13 +86,13 @@
             <table class="table_cart_2_2">
                 <tr>
                     <th>이름</th>
-                    <td>이민형</td>
+                    <td>${name }</td>
                 </tr>
                 <tr>
                     <th>이메일</th>
                         <td>
-                            <input type="text" id="m_text" name="email">@
-                            <input type="text" id="m_text" name="email" class="m_text">&nbsp;
+                            <input type="text" id="m_text" name="email1">@
+                            <input type="text" id="m_text" name="email2" class="m_text">&nbsp;
                             <select id="m_address">
                                 <option value="">직접입력</option>
                                 <option value="naver.com">naver.com</option>
@@ -105,14 +105,14 @@
                 <tr>
                     <th>연락처</th>
                     <td>
-                        <select id="m_phone" name="phone" value="">
+                        <select id="m_phone" name="">
                             <option>010</option>
                             <option>011</option>
                             <option>016</option>
                             <option>017</option>
                         </select>&nbsp;-&nbsp;
-                        <input type="text" id="m_text2" name="phone" value="">&nbsp;-&nbsp;
-                        <input type="text" id="m_text2" name="phone" value="">
+                        <input type="text" id="m_text2" name="" value="">&nbsp;-&nbsp;
+                        <input type="text" id="m_text2" name="" value="">
                     </td>
                 </tr>
             </table>
@@ -130,14 +130,14 @@
                 <tr>
                     <th>연락처</th>
                     <td>
-                        <select id="m_phone">
+                        <select id="m_phone" name="phone1">
                             <option>010</option>
                             <option>011</option>
                             <option>016</option>
                             <option>017</option>
                         </select>&nbsp;-&nbsp;
-                        <input type="text" id="m_text2" name="phone" value="" title="전화번호">&nbsp;-&nbsp;
-                        <input type="text" id="m_text2" name="phone" value="" title="전화번호">
+                        <input type="text" id="m_text2" name="phone2" value="" title="전화번호">&nbsp;-&nbsp;
+                        <input type="text" id="m_text2" name="phone3" value="" title="전화번호">
                     </td>
                 </tr>
                 <tr>
@@ -155,10 +155,10 @@
                     <th>주소</th>
                     <td>
                         <div class="paybox">
-                            <input type="text" id="m_text3" name="addr" value="" title="주소">
+                            <input type="text" id="m_text3" name="addr1" value="" title="주소">
                         </div>
                         <div class="paybox">
-                            <input type="text" id="m_text3"  name="addr" value="" title="상세주소">&nbsp;(상세주소)
+                            <input type="text" id="m_text3"  name="addr2" value="" title="상세주소">&nbsp;(상세주소)
                         </div>
                     </td>
                 </tr>
@@ -378,7 +378,11 @@
             </tr>
         </table>
     </div>
-    
+    <input type="hidden" name="userid" value="<%=userid%>">
+    <input type="hidden" name="s_idx" value="${cList.s_idx }">
+    <input type="hidden" name="" value="">
+    <input type="hidden" name="" value="">
+    <input type="hidden" name="" value="">
     </form>
     <%@ include file="common/footer.jsp" %>
 </body>

@@ -10,11 +10,11 @@
 <head>
 <meta charset="UTF-8">
 <title>메인페이지</title>
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/seller.css">
 </head>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">	
@@ -41,7 +41,7 @@
 					<div class="card-body">
 						<h5 class="card-title">크림치즈마켓</h5>
 						<p class="card-text">#10대#20대#심플베이직#러블리</p>
-						<a href="#" class="btn btn-primary" style="background-color : orange hidden">방문하기</a>
+						<a href="#" class="btn btn-primary" style="background-color : orange; border: 1px solid orange">방문하기</a>
 					</div>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 					<div class="card-body">
 						<h5 class="card-title">쇼퍼랜드</h5>
 						<p class="card-text">#10대#20대#심플베이직#캠퍼스룩</p>
-						<a href="#" class="btn btn-primary">방문하기</a>
+						<a href="#" class="btn btn-primary" style="background-color : orange; border: 1px solid orange">방문하기</a>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 					<div class="card-body">
 						<h5 class="card-title">런앱썸</h5>
 						<p class="card-text">#20대#러블리#캐주얼</p>
-						<a href="#" class="btn btn-primary">방문하기</a>
+						<a href="#" class="btn btn-primary" style="background-color : orange; border: 1px solid orange">방문하기</a>
 					</div>
 				</div>
 			</div>
@@ -74,17 +74,17 @@
 					<div class="card-body">
 						<h5 class="card-title">기프티박스</h5>
 						<p class="card-text">#10대#20대#페미닌#심플베이직</p>
-						<a href="#" class="btn btn-primary">방문하기</a>
+						<a href="#" class="btn btn-primary" style="background-color : orange; border: 1px solid orange">방문하기</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="card">
-					<img src="images/model5.jpg" class="card-img-top">
+					<img src="images/model11.jpg" class="card-img-top" style="height:445px">
 					<div class="card-body">
 						<h5 class="card-title">베이델리</h5>
 						<p class="card-text">#10대#20대#페미닌#심플베이직</p>
-						<a href="#" class="btn btn-primary">방문하기</a>
+						<a href="#" class="btn btn-primary" style="background-color : orange; border: 1px solid orange">방문하기</a>
 					</div>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 					<div class="card-body">
 						<h5 class="card-title">무아무아</h5>
 						<p class="card-text">#10대#20대#심플베이직#러블리</p>
-						<a href="#" class="btn btn-primary">방문하기</a>
+						<a href="#" class="btn btn-primary" style="background-color : orange; border: 1px solid orange">방문하기</a>
 					</div>
 				</div>
 			</div>
@@ -112,7 +112,8 @@
 				<img src="images/image5.jpg" class="card-img-top" style="height:384px">
 				<div class="card-body">
 					<h5 class="card-title">반팔</h5>
-					<input class="btn btn-primary" style="background-color : orange hidden"
+                    <p class="card-text">#10대#20대#심플베이직#골져스#한복아님</p>
+					<input class="btn btn-primary" style="background-color : orange; color: black; border: 1px solid orange"
 						type="button" value="방문하기" onclick="go_productlist(this.form)">
 					<input type="hidden" name="p_idx" value="1">
 					<input type="hidden" name="type" value="productlist">
@@ -127,7 +128,8 @@
 				<img src="images/image6.jpg" class="card-img-top" style="height:384px">
 				<div class="card-body">
 					<h5 class="card-title">슬랙스</h5>
-					<input class="btn btn-primary" style="background-color : orange hidden"
+                    <p class="card-text">#10대#20대#롱다리쓰#김현정#8090</p>
+					<input class="btn btn-primary" style="background-color : orange; color: black; border: 1px solid orange"
 						type="button" value="방문하기" onclick="go_productlist(this.form)">
 					<input type="hidden" name="p_idx" value="2">
 					<input type="hidden" name="type" value="productlist">
@@ -142,7 +144,8 @@
 				<img src="images/image8.jpg" class="card-img-top" style="height:384px">
 				<div class="card-body">
 					<h5 class="card-title">반지</h5>
-					<input class="btn btn-primary" style="background-color : orange hidden"
+                    <p class="card-text">#20대#30대#심플베이직하우스#절대반지#사우론</p>
+					<input class="btn btn-primary" style="background-color : orange; color: black; border: 1px solid orange"
 						type="button" value="방문하기" onclick="go_productlist(this.form)">
 					<input type="hidden" name="p_idx" value="3">
 					<input type="hidden" name="type" value="productlist">
@@ -162,9 +165,42 @@
 				<img src="images/tiger.jpg" class="card-img-top" style="height:384px">
 				<div class="card-body">
 					<h5 class="card-title">어흥빤스</h5>
-					<input class="btn btn-primary" style="background-color : orange hidden"
+                    <p class="card-text">#40대#50대#아버지들#아우터#푹신#따뜻#자신감</p>
+					<input class="btn btn-primary" style="background-color : orange; color: black; border: 1px solid orange;"
 						type="button" value="방문하기" onclick="go_productlist(this.form)">
 					<input type="hidden" name="p_idx" value="128">
+					<input type="hidden" name="type" value="productlist">
+					<input type="hidden" name="userid" value="${userid }">
+				</div>
+			</form>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+			<form method="post">
+				<img src="images/이클립스패키지.PNG" class="card-img-top" style="height:390px">
+				<div class="card-body">
+					<h5 class="card-title">이클립스패키지</h5>
+					<p class="card-text">#10대#20대#충진사마#필수템</p>
+					<input class="btn btn-primary" style="background-color : orange; color: black; border: 1px solid orange;"
+						type="button" value="방문하기" onclick="go_productlist(this.form)">
+					<input type="hidden" name="p_idx" value="14">
+					<input type="hidden" name="type" value="productlist">
+					<input type="hidden" name="userid" value="${userid }">
+				</div>
+			</form>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+			<form method="post">
+				<img src="images/이클립스파랑.PNG" class="card-img-top" style="height:390px">
+				<div class="card-body">
+					<h5 class="card-title">이클립스파랑</h5>
+					<p class="card-text">#10대#20대#충진사마#필수템#시푸</p>
+					<input class="btn btn-primary" style="background-color : orange; color: black; border: 1px solid orange;"
+						type="button" value="방문하기" onclick="go_productlist(this.form)">
+					<input type="hidden" name="p_idx" value="13">
 					<input type="hidden" name="type" value="productlist">
 					<input type="hidden" name="userid" value="${userid }">
 				</div>

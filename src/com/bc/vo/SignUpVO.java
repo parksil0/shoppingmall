@@ -4,14 +4,6 @@ public class SignUpVO {
 	
 	private String userid, password, name, email, phone, addr;
 
-	public SignUpVO(String name, String email, String phone, String addr) {
-		super();
-		this.name = name;
-		this.email = email;
-		this.phone = phone;
-		this.addr = addr;
-	}
-
 	public String getUserid() {
 		return userid;
 	}

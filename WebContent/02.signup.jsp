@@ -77,7 +77,7 @@
 
         <!--회원가입 창-->
         <div class="join_chang">
-            <h2>JOIN US</h2>
+            <h2 style="background-color: #fff3e5; padding: 50px;">JOIN US</h2>
             <p style="color: gray; ">비트마켓 회원가입으로 다양한 혜택을 누리세요.</p>
         </div>
 
@@ -85,26 +85,26 @@
         <form id = "clickchk" method="post" action="03.signup2.jsp">
         	
 	        <div class="join_form">
-	            <input type="checkbox" class="join-checkbox" id="check_all">전체동의
+	            <input type="checkbox" class="join-checkbox" id="check_all">&nbsp;&nbsp;전체동의
 	        </div>
 
         <!-- 회원가입 이용약관 -->  
 	        <div class="join_form">
 	            <div class="join_form1">
-	                <input type="checkbox" class="join-checkbox" name="clickchk" id="chkbox1">
+	                <input type="checkbox" class="join-checkbox" name="clickchk" id="chkbox1">&nbsp;
 	               	이용약관
 	          	</div>
 
 	            <!-- 회원가입 개인정보수집(내용보기포함) -->    
 	            <div class="join_form1">
 	                <input type="checkbox" class="join-checkbox" name="clickchk" id="chkbox2">
-	                   	 개인정보 수집 및 이용 안내 <u>내용보기</u></p>
+	                   	 <p>&nbsp;&nbsp;개인정보 수집 및 이용 안내 <u>내용보기</u></p>
 	            </div>
 	
 	            <!-- 회원가입 개인정보수집2(내용보기포함) -->  
 	            <div class="join_form1">
 	                <input type="checkbox" class="join-checkbox" name="clickchk" id="chkbox3">
-	               	 개인정보 처리위탁 <u>내용보기</u></p>
+	               	 <p>&nbsp;&nbsp;개인정보 처리위탁 <u>내용보기</u></p>
 	            </div>
         	</div>
 
@@ -112,11 +112,11 @@
         <div class="join_form" style="border-bottom: solid 1px gainsboro;">
         	<div class="join_form1" >
 	            <input type="checkbox" class="join-checkbox" name="clickchk" id="chkbox" style="float: left;">
-	            <p style="float: left;">마케팅 수신 동의(</p>
+	            <p style="float: left;">&nbsp;&nbsp;마케팅 수신 동의&nbsp;&nbsp; (&nbsp;</p>
 	            <input type="checkbox" class="join-checkbox" style="float: left; ">
-	            <p style="float: left;">이메일</p>
+	            <p style="float: left;">&nbsp;이메일&nbsp;&nbsp;&nbsp;</p>
 	            <input type="checkbox" class="join-checkbox" style="float: left;">
-	            <p style="float: left;">SMS)</p>
+	            <p style="float: left;">&nbsp;SMS&nbsp;)</p>
             	<br>
 	            <div class="etc">
 	                <p style="color: gray; font-size: 0.9em;"> 
@@ -134,7 +134,14 @@
         <div class="useContract1">
             <p style="font-size: 0.9em; margin-bottom: 10px;">이용약관</p>
             <div class="useContract">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                "이 약관은 bit 주식회사(이하 "회사"라 함)가 운영하는 인터넷 사이트
+						bitshop(http://www.bitshop.com; 이하 "bitshop 쇼핑"이라 함)에 광고 게재 요청에 따라
+						광고주가 판매하는 광고를 게재함에 있어 "회사"와 "광고주" 간의 권리, 의무 및 책임사항을 규정함을 목적으로 한다."<br>
+						"bit shop 주식회사(이하 '회사'라 함)는 이용자의 개인정보를 중요시하며, '정보통신망 이용 촉진 및 정보보호
+					등에 관한 법뷸', 개인정보 보호법 등 관계법령에 의거하여 개인정보를 관리 및 보호하고 있습니다." <br>
+					"회사의 bitshop 쇼핑 "쇼핑파트너센터" 서비스에서는 개인정보의 수집, 이용 등 처리에 있어 아래의 사항을
+					정보주체에게 안내합니다." <br> 정보주체는 개인정보의 수집 및 이용 동의를 거부할 권리가 있으나 본 동의는
+					서비스 제공을 위한 최소한의 개인정보 수집으로서 거부하실 경우, 서비스 이용이 불가능합니다.
             </div>
         </div>
 
@@ -207,8 +214,12 @@
         <!--input type="checkbox" id="chkbox" name="clickchk">모든 항목에 동의 하였습니다.--><br>
          
         <div class="join_form1">
-        <input type="checkbox" id="chkbox" name="clickchk">모든 항목에 동의 하였습니다.</div>
-     	<button id="ButSubmit" class ="ajoin_btn">가입하기</button>
+        <input type="checkbox" id="chkbox" name="clickchk">&nbsp;&nbsp;모든 항목에 동의 하였습니다.
+        </div>
+        <div style="width: 1000px; margin-top: 30px; padding-left: 330px;">
+     	  <button id="ButSubmit" class ="ajoin_btn">가입하기</button>
+        </div>
+        <br><br><br><br><br><br>
     </div>
     
     <%@ include file="common/footer.jsp" %> 

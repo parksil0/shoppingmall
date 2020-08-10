@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String p_price = (String)request.getAttribute("p_price");
+	String c_reserve = (String)request.getAttribute("c_reserve");
+	String insertName = (String)request.getAttribute("insertName");
+	String a_address = (String)request.getAttribute("a_address");
+	String a_phone = (String)request.getAttribute("a_phone");
+	String a_message= (String)request.getAttribute("a_message");
+	String userid = (String)session.getAttribute("userid");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,8 +75,8 @@
 	                    <th>총 결제금액</th>
 	                </tr>
 	                <tr>
-	                    <td>36,000원</td>
-	                    <td>36,000원</td>
+	                    <td><%=p_price %>원</td>
+	                    <td><%=p_price %>원</td>
 	                </tr>
 	            </table>
 	            <table class="table_finish2_1">
@@ -77,7 +86,7 @@
 	                </colgroup>
 	                <tr>
 	                    <th>총 적립예정금액</th>
-	                    <td>360원</td>
+	                    <td><%=c_reserve %>원</td>
 	                </tr>
 	            </table>
 	        </div>
@@ -93,29 +102,29 @@
 	                </colgroup>
 	                <tr>
 	                    <th>받으시는 분</th>
-	                    <td>박바늘</td>
+	                    <td><%=insertName %></td>
 	                </tr>
 	                <tr>
 	                    <th>주소</th>
-	                    <td>의왕</td>
+	                    <td><%=a_address %></td>
 	                </tr>
 	                <tr>
 	                    <th>휴대전화</th>
-	                    <td>1541</td>
+	                    <td><%=a_phone %></td>
 	                </tr>
 	                <tr>
 	                    <th>배송메시지</th>
-	                    <td></td>
+	                    <td><%=a_message %></td>
 	                </tr>
 	            </table>
 	        </div>
 	        
 	        <div class="div_finish4">
-	            <input type="button" value="쇼핑계속하기" id="c_button1">&nbsp;&nbsp;
+	            <input type="button" value="쇼핑계속하기" id="c_button1" onclick="javascript:location.href='01.main.jsp'">&nbsp;&nbsp;
 	            <input type="button" value="주문확인하기" id="c_button3" onclick="view_order(this.form)">
 	        </div>
 	    </div>
-	    <input type="hidden" name="userid" value="podongEbi">
+	    <input type="hidden" name="userid" value="<%=userid%>">
     </form>
     <%@ include file="common/footer.jsp" %>
 </body>

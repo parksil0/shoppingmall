@@ -11,6 +11,15 @@
 	function logout() {
 		location.href="00.logoutAction.jsp";
 	}
+	function viewSeller(frm) {
+		frm.action="controller?type=viewSeller";
+		frm.submit();
+	}
+	
+	function goMypage(frm) {
+		frm.action="controller?type=goMypage";
+		frm.submit();
+	}
 </script>
  <div class="eve">
 	<div class="logo">
@@ -36,26 +45,19 @@
 			</li>
             <!--마이페이지 드롭박스-->
             <li class = "mypage">
-                <select style="width:100px;font-size: 14px; font-weight: bold;"onchange="location.href=this.value" >
-                        <option>마이페이지</option>
-                        <option value="">주문조회</option>
-                        <option value="">위시리시트</option>
-                        <option value="">쿠폰</option>
-                        <option value="">게시판</option>
-                        <option value="">회원정보</option>
-                </select>
+                <form method="post">
+                	<input type="hidden" name="userid" value="<%=useridChk%>">
+                	<input type="button" value="마이페이지" style="width:100px;font-size: 14px; font-weight: bold;"
+                			onclick="goMypage(this.form)">
+                </form>
             </li>
             <!-- 셀러등록 드롭박스 -->
             <li class = "sellerRegister" style="padding:0px 0px 0px 10px;">
-                <select style="width:100px;font-size: 14px; font-weight: bold;"
-                onchange="location.href=this.value" >
-                    <option>상점 정보</option>
-                    <option value="">셀러 정보</option>
-                    <option value="">상품등록</option>
-                    <option value="">매출정보</option>
-                    <option value="">게시판</option>
-                    <option value="">회원정보</option>
-                </select>
+                <form method="post">
+                	<input type="button" value="상점정보" style="width:100px;font-size: 14px; font-weight: bold;"
+                			onclick="viewSeller(this.form)">
+                	<input type="hidden" name="userid" value="<%=useridChk %>">
+                </form>
             </li>
         </ul>
         

@@ -32,7 +32,7 @@ public class viewCartlistCommand implements Command {
 		
 		System.out.println("카트리스트 목록 : " + cList);
 		
-		return "25.Shop_cart.jsp";
+		return "25.Shop_cart1-2.jsp";
 	}
 
 }

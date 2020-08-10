@@ -33,7 +33,7 @@ public class delCartlistCommand implements Command {
 		System.out.println("개별삭제 카트리스트 : " + cList);
 		request.setAttribute("cList", cList);
 		
-		return "25.Shop_cart.jsp";
+		return "25.Shop_cart1-2.jsp";
 	}
 
 }

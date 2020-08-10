@@ -21,31 +21,7 @@
     <h1 class="title">할인쿠폰</h1>
     
     <div class="div_k">
-        <div class="div_order">
-            <table class="menubar">
-                <tr>
-                    <th><a href="#">주문조회</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">할인쿠폰</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">적립금내역</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">장바구니</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">관심상품</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">회원정보</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">내 게시글</a></th>
-                </tr>
-            </table>
-        </div>
+        <%@ include file="common/mypage.jsp" %>
 
         <div class="div_order2">
             <table class="table_list">

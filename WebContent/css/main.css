@@ -98,6 +98,11 @@ h2 {
     margin-top:4%;
  
 }
+.banner a:hover {
+    background-color: #FFB82B;
+    color: white;
+    font-size: 16px;
+}
 
 /*로그인창*/
 .lg{
@@ -391,3 +396,10 @@ u {
         position: fixed;
         top: 0px;
       }
+
+/* ----------------------- 포동애비 --------------------------*/
+.container {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 1100px;
+}

@@ -37,6 +37,7 @@ public class addCartlistCommand implements Command {
 		String c_quantity = request.getParameter("quantity");
 		String p_price = request.getParameter("p_price");
 		String c_reserve = request.getParameter("p_reserve");
+		String s_idx = request.getParameter("s_idx");
 		
 		int setPrice = Integer.parseInt(p_price);
 		int setQuantity = Integer.parseInt(c_quantity);
@@ -57,10 +58,11 @@ public class addCartlistCommand implements Command {
 		map.put("p_price", p_price);
 		map.put("c_reserve", c_reserve);
 		map.put("p_idx", p_idx);
+		map.put("s_idx", s_idx);
 		
 		System.out.println("p_idx : " + p_idx + ", userid : " + userid + ", p_thumbnail : " + p_thumbnail +
 					", p_name : " + p_name + ", o_option : " + o_option + ", c_quantity : " + c_quantity + ", p_price : " +
-					p_price + "c_reserve : " + c_reserve);
+					p_price + "c_reserve : " + c_reserve + ", s_idx : " + s_idx);
 		
 		int result = ProductDAO.isDuplicate(map);
 

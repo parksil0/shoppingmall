@@ -158,16 +158,32 @@
             </table>
             <hr class="hr_line">
         </div>
-        <div class="div_cart3">
-            <input type="button" value="계속 쇼핑하기" id="c_button1" onclick="javascript:location.href='main.jsp'">&nbsp;&nbsp;
-          	<form method="post">
-            	<input type="hidden" name="userid" value="<%=userid%>">
-            	<input type="button" value="장바구니 비우기" id="c_button2" onclick="deleteAll(this.form)">&nbsp;&nbsp;
-            </form>
-            <form method="post">
-	            	<input type="hidden" name="userid" value="<%=userid%>">
-	            	<input type="button" value="주문하기" id="c_button3" onclick="goOrderlist(this.form)">
-            </form>
+        <div class="div_cart37">
+            <table>
+                <tr>
+                    <th>
+                        <div>
+                            <input  type="button" value="계속 쇼핑하기" id="c_button1" onclick="javascript:location.href='main.jsp'">&nbsp;&nbsp;
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <form method="post">
+                                <input type="hidden" name="userid" value="<%=userid%>">
+                                <input type="button" value="장바구니 비우기" id="c_button2" onclick="deleteAll(this.form)">&nbsp;&nbsp;
+                            </form>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <form method="post">
+                                    <input type="hidden" name="userid" value="<%=userid%>">
+                                    <input type="button" value="주문하기" id="c_button3" onclick="goOrderlist(this.form)">
+                            </form>
+                        </div>
+                    </th>
+                </tr>
+            </table>
         </div>
     </div>
 <%@ include file="common/footer.jsp" %>

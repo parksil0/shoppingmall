@@ -1,8 +1,7 @@
 package com.bc.vo;
 
 public class O_OrderVO {
-	
-	private String o_num, userid, s_idx, p_idx, o_product, o_place, o_order, o_account, o_pay, o_date, o_con;
+	private String o_num, userid, p_idx, o_product, o_place, o_order, o_account, o_pay, o_date, o_con, p_price, s_idx, c_reserve;
 
 	public String getO_num() {
 		return o_num;
@@ -18,14 +17,6 @@ public class O_OrderVO {
 
 	public void setUserid(String userid) {
 		this.userid = userid;
-	}
-
-	public String getS_idx() {
-		return s_idx;
-	}
-
-	public void setS_idx(String s_idx) {
-		this.s_idx = s_idx;
 	}
 
 	public String getP_idx() {
@@ -92,12 +83,36 @@ public class O_OrderVO {
 		this.o_con = o_con;
 	}
 
-	@Override
-	public String toString() {
-		return "P_OrderVO [o_num=" + o_num + ", userid=" + userid + ", s_idx=" + s_idx + ", p_idx=" + p_idx
-				+ ", o_product=" + o_product + ", o_place=" + o_place + ", o_order=" + o_order + ", o_account="
-				+ o_account + ", o_pay=" + o_pay + ", o_date=" + o_date + ", o_con=" + o_con + "]";
+	public String getP_price() {
+		return p_price;
 	}
 
+	public void setP_price(String p_price) {
+		this.p_price = p_price;
+	}
+
+	public String getS_idx() {
+		return s_idx;
+	}
+
+	public void setS_idx(String s_idx) {
+		this.s_idx = s_idx;
+	}
+
+	public String getC_reserve() {
+		return c_reserve;
+	}
+
+	public void setC_reserve(String c_reserve) {
+		this.c_reserve = c_reserve;
+	}
+
+	@Override
+	public String toString() {
+		return "O_OrderVO [o_num=" + o_num + ", userid=" + userid + ", p_idx=" + p_idx + ", o_product=" + o_product
+				+ ", o_place=" + o_place + ", o_order=" + o_order + ", o_account=" + o_account + ", o_pay=" + o_pay
+				+ ", o_date=" + o_date + ", o_con=" + o_con + ", p_price=" + p_price + ", s_idx=" + s_idx
+				+ ", c_reserve=" + c_reserve + "]";
+	}
 	
 }

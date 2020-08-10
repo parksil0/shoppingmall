@@ -35,7 +35,6 @@
 				return false;
    
 			} else {
-				alert("else로 접근"); 
 				firstForm.action="controller?type=register"
 				firstForm.submit();
 			}
@@ -55,11 +54,13 @@
 %> 
 	<div class="wrap">
 	<form method = "post"  name="signUpForm">
-        <div class="join_chang">
+        <div class="join_chang" style="background-color: #fff3e5; padding: 10px; width: 1000px; text-align: center; margin-left: 230px;">
             <h2>JOIN US</h2>
+        </div>
+        
+        <div style="width: 1000px; text-align: center; margin-left: 240px; padding: 20px">
             <p style="color: gray;">비트마켓 회원가입으로 다양한 혜택을 누리세요.</p>
         </div>
-
         <!--내용항목-->
         <div class="form_group">
 
@@ -88,11 +89,11 @@
             <div class=form_pwd>
                 <label class="label">비밀번호</label>
                 <!--입력하는 네모창 -->
-                <input type="text" class="form_ele" style="margin-left:2.8%;" name="password" title="비밀번호">
+                <input type="password" class="form_ele" style="margin-left:2.8%;" name="password" title="비밀번호">
                 <!--비밀번호 확인-->
                 <label class="label" style="margin-left:4%;">비밀번호 확인</label>
                 <!--입력하는 네모창 -->
-                <input type="text" class="form_ele" style="margin-left:2%;" name="password2" title="비밀번호 확인"><br><br>
+                <input type="password" class="form_ele" style="margin-left:2%;" name="password2" title="비밀번호 확인"><br><br>
              </div>
             <div class="line"></div>   
     
@@ -183,11 +184,12 @@
             </div>
         </div>
 	    <!--완료(가입취소회원가입) 버튼-->
-	    <div class="form_btn">
+	    <div class="form_btn" style="width: 1000px; margin: auto; padding-left: 650px;">
 	        <input type="submit" class="form_btn2" value="회원가입"  onclick="validate()" >
 	    <!--완료(회원가입) 버튼-->
 	        <input type="button" class="form_btn1" value="가입취소" onclick="javascript:location.href='01.main.jsp'">
 	        <div class="line2"></div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	    </div>
     </form>
 </div>

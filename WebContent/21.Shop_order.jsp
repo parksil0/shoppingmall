@@ -23,45 +23,21 @@
     <h1 class="title">주문조회</h1>
     
     <div class="div_k">
-        <div class="div_order">
-            <table class="menubar">
-                <tr>
-                    <th><a href="#">주문조회</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">할인쿠폰</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">적립금내역</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">장바구니</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">관심상품</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">회원정보</a></th>
-                </tr>
-                <tr>
-                    <th><a href="#">내 게시글</a></th>
-                </tr>
-            </table>
-        </div>
+        <%@ include file="common/mypage.jsp" %>
 
         <div class="div_order2">
             <table class="table_list">
                 <colgroup>
-                    <col width=5%>
-                    <col width=20%>
+                    <col width=10%>
+                    <col width=15%>
                     <col width=15%>
                     <col width=35%>
                     <col width=15%>
                     <col width=10%>
                 </colgroup>
                 <tr>
-                    <th>번호</th>
                     <th>주문번호</th>
+                    <th>상점이름</th>
                     <th>주문일자</th>
                     <th>상품명</th>
                     <th>결제금액</th>
@@ -70,11 +46,11 @@
                 <c:if test="${not empty order }">
                 	<c:forEach var="order" items="${order }">
 	               		<tr>
-	                		<td>1</td>
 	                		<td>${order.o_num }</td>
+	                		<td>${order.s_idx }</td>
 	                		<td>${order.o_date }</td>
 	                		<td>${order.o_product }</td>
-	                		<td>59,000원</td>
+	                		<td>${order.p_price }원</td>
 	                		<td>${order.o_con }</td>
 	                	</tr>
 	                </c:forEach>

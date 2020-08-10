@@ -46,7 +46,7 @@
 	}
 	//장바구니 거치지 않고 바로 구매페이지 이동
 	function directBuy(frm) {
-		frm.action="25-2.directOrder.jsp";
+		frm.action="25.directOrder2-2.jsp";
 		frm.submit();
 	}
 	//위시리스트 이동
@@ -148,6 +148,7 @@
 			<input type="hidden" name="p_name" value="${pvo.p_name }">
 			<input type="hidden" name="p_price" value="${pvo.p_price }">
 			<input type="hidden" name="p_reserve" value="${pvo.p_reserve }">
+			<input type="hidden" name="s_idx" value="${pvo.s_idx }">
 		</form>
 	</div>
 	<%-- 상품 내용 정보 --%>

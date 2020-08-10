@@ -12,7 +12,7 @@
       <transactionManager type="JDBC"/>
       <dataSource type="POOLED">
         <property name="driver" value="oracle.jdbc.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@192.168.0.42:1521:xe"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
         <property name="username" value="SHOP"/>
         <property name="password" value="1234"/>
       </dataSource>
@@ -22,19 +22,4 @@
     <mapper resource="com/bc/mybatis/mapper.xml"/>
   </mappers>
 </configuration>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

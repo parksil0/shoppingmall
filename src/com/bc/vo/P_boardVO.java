@@ -2,7 +2,7 @@ package com.bc.vo;
 
 public class P_boardVO {
 	private String p_idx, c_num, p_name, p_price, p_content, p_reserve, p_tag,
-					userid, p_date,	p_image, p_thumbnail;
+					userid, p_date,	p_image, p_thumbnail, s_idx;
 
 	public String getP_idx() {
 		return p_idx;
@@ -91,13 +91,24 @@ public class P_boardVO {
 	public void setP_thumbnail(String p_thumbnail) {
 		this.p_thumbnail = p_thumbnail;
 	}
+	
+	public String getS_idx() {
+		return s_idx;
+	}
+
+	public void setS_idx(String s_idx) {
+		this.s_idx = s_idx;
+	}
 
 	@Override
 	public String toString() {
 		return "P_boardVO [p_idx=" + p_idx + ", c_num=" + c_num + ", p_name=" + p_name + ", p_price=" + p_price
 				+ ", p_content=" + p_content + ", p_reserve=" + p_reserve + ", p_tag=" + p_tag + ", userid=" + userid
-				+ ", p_date=" + p_date + ", p_image=" + p_image + ", p_thumbnail=" + p_thumbnail + "]";
+				+ ", p_date=" + p_date + ", p_image=" + p_image + ", p_thumbnail=" + p_thumbnail + ", s_idx=" + s_idx
+				+ "]";
 	}
+
+
 
 	
 }

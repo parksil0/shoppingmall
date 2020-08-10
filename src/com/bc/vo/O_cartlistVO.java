@@ -1,7 +1,7 @@
 package com.bc.vo;
 
 public class O_cartlistVO {
-	private String userid, p_idx, p_thumbnail, p_name, o_option, c_delevery, c_quantity, p_price, c_reserve;
+	private String userid, p_idx, p_thumbnail, p_name, o_option, c_delevery, c_quantity, p_price, c_reserve, s_idx;
 
 	public String getUserid() {
 		return userid;
@@ -74,15 +74,20 @@ public class O_cartlistVO {
 	public void setC_reserve(String c_reserve) {
 		this.c_reserve = c_reserve;
 	}
+	
+	public String getS_idx() {
+		return s_idx;
+	}
+
+	public void setS_idx(String s_idx) {
+		this.s_idx = s_idx;
+	}
 
 	@Override
 	public String toString() {
 		return "O_cartlistVO [userid=" + userid + ", p_idx=" + p_idx + ", p_thumbnail=" + p_thumbnail + ", p_name="
 				+ p_name + ", o_option=" + o_option + ", c_delevery=" + c_delevery + ", c_quantity=" + c_quantity
-				+ ", p_price=" + p_price + ", c_reserve=" + c_reserve + "]";
+				+ ", p_price=" + p_price + ", c_reserve=" + c_reserve + ", s_idx=" + s_idx + "]";
 	}
 
-
-	
-	
 }

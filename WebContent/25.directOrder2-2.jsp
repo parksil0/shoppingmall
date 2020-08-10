@@ -15,6 +15,7 @@
 	String p_name = request.getParameter("p_name");
 	String c_reserve = request.getParameter("p_reserve");
 	String o_option = request.getParameter("option");
+	String s_idx = request.getParameter("s_idx");
 	
 	int setPrice = Integer.parseInt(p_price);
 	int setQuantity = Integer.parseInt(c_quantity);
@@ -103,13 +104,13 @@
             <table class="table_cart_2_2">
                 <tr>
                     <th>이름</th>
-                    <td>이민형</td>
+                    <td><input type="text" name="insertName" value=""></td>
                 </tr>
                 <tr>
                     <th>이메일</th>
                         <td>
-                            <input type="text" id="m_text">@
-                            <input type="text" id="m_text" class="m_text">&nbsp;
+                            <input type="text" id="m_text" name="email1">@
+                            <input type="text" id="m_text" class="m_text" name="email2">&nbsp;
                             <select id="m_address">
                                 <option value="">직접입력</option>
                                 <option value="naver.com">naver.com</option>
@@ -147,14 +148,14 @@
                 <tr>
                     <th>연락처</th>
                     <td>
-                        <select id="m_phone">
+                        <select id="m_phone" name="phone1">
                             <option>010</option>
                             <option>011</option>
                             <option>016</option>
                             <option>017</option>
                         </select>&nbsp;-&nbsp;
-                        <input type="text" id="m_text2" name="phone" value="" title="전화번호">&nbsp;-&nbsp;
-                        <input type="text" id="m_text2" name="phone" value="" title="전화번호">
+                        <input type="text" id="m_text2" name="phone2" value="" title="전화번호">&nbsp;-&nbsp;
+                        <input type="text" id="m_text2" name="phone3" value="" title="전화번호">
                     </td>
                 </tr>
                 <tr>
@@ -172,17 +173,17 @@
                     <th>주소</th>
                     <td>
                         <div class="paybox">
-                            <input type="text" id="m_text3" name="addr" value="" title="주소">
+                            <input type="text" id="m_text3" name="addr1" value="" title="주소">
                         </div>
                         <div class="paybox">
-                            <input type="text" id="m_text3"  name="addr_detail" value="" title="상세주소">&nbsp;(상세주소)
+                            <input type="text" id="m_text3"  name="addr2" value="" title="상세주소">&nbsp;(상세주소)
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <th>주문메세지<br>(100자내외)</th>
                     <td>
-                        <textarea rows="10px" cols="30px" id="text_area"></textarea>
+                        <textarea rows="10px" cols="30px" id="text_area" name="message"></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -329,12 +330,12 @@
         </div>
         
         <div class="div_o_button">
-            <input type="button" value="주문하기" id="c_button3_cardpass" onclick="write_order(this.form)">&nbsp;&nbsp;
+            <input type="button" value="주문하기" id="c_button3_cardpass">&nbsp;&nbsp;
             <input type="button" value="주문취소" id="c_button1">      
         </div>
     </div>
     
-    </form>
+    
     
     
     <!-- 카드결제 페이지 -->
@@ -369,41 +370,44 @@
             <tr>
                 <td>카드번호</td>
                 <td>
-                    <input type="text" id="n_box">-
-                    <input type="text" id="n_box">-
-                    <input type="text" id="n_box">-
-                    <input type="text" id="n_box">
+                    <input type="text" id="n_box" name="cardNum1" value="">-
+                    <input type="text" id="n_box" name="cardNum2" value="">-
+                    <input type="password" id="n_box" name="cardNum3" value="">-
+                    <input type="text" id="n_box" name="cardNum4" value="">
                 </td>
             </tr>
             <tr>
                 <td>CVC 번호<br>(숫자 3자리 입력)</td>
                 <td>
-                    <input type="text" id="n_box">
+                    <input type="password" id="n_box">
                 </td>
             </tr>
             <tr>
                 <td>카드 비밀번호<br>(숫자 4자리)</td>
                 <td>
-                    <input type="text" id="n_box">
+                    <input type="password" id="n_box" name="cardPw" value="">
                 </td>
             </tr>
             <tr id="n_but">
                 <td colspan="2">
                     <input type="button" value="취소" id="n_but1">
-                    <input type="button" value="확인" id="n_but2">
+                    <input type="button" value="확인" id="n_but2" onclick="cardChk(this.form)">
                 </td>
             </tr>
         </table>
     </div>
+    <input type="hidden" name="userid" value="<%=userid %>">
+    <input type="hidden" name="p_idx" value="<%=p_idx %>">
+    <input type="hidden" name="o_product" value="<%=p_name %>">
+    <input type="hidden" name="p_price" value="<%=p_price %>">
+    <input type="hidden" name="s_idx" value="<%=s_idx %>">
+    <input type="hidden" name="c_reserve" value="<%=c_reserve %>">
+</form>
 <%@ include file="common/footer.jsp" %>
 </body>
 
 <script>
-	function write_order(frm) {
-		frm.action = "controller?type=write";
-		frm.submit();
-	}
-	
+
 	$(function(){
         $("#close_x").click(function(){
             $(".div_cardpass").hide();
@@ -420,13 +424,24 @@
         
         $("#c_button3_cardpass").click(function(){
             if($("#agree").is(":checked")==false){
-                alert("상기 결제정보 체크란에 동의하셔야 구매 가능합니당 ;;");
+                alert("상기 결제정보 체크란에 동의하셔야 구매 가능합니다.");
                 return false;
             } else {
                 $(".div_cardpass").show();
             }
         })
     });
+	
+	function write_order(frm) {
+		frm.action = "controller?type=write";
+		frm.submit();
+	}
+	
+	
+	function cardChk(frm) {
+		frm.action="controller?type=cardChk";
+		frm.submit();
+	}
 </script>
 
 </html>

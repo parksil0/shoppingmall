@@ -8,10 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.bc.command.CardChkCommand;
 import com.bc.command.Command;
+import com.bc.command.GoMypageCommand;
+import com.bc.command.InsertProduct2Command;
+import com.bc.command.InsertProduct3Command;
+import com.bc.command.InsertProductCommand;
+import com.bc.command.MyBoardCommand;
+import com.bc.command.MyPointCommand;
 import com.bc.command.OrderCommand;
 import com.bc.command.RegisterCommand;
+import com.bc.command.SellerRegisterCommand;
+import com.bc.command.ShopRegisterCommand;
 import com.bc.command.ViewCommand;
+import com.bc.command.ViewSellerCommand;
 import com.bc.command.WriteCommand;
 import com.bc.command.addCartlistCommand;
 import com.bc.command.delCartlistCommand;
@@ -38,13 +48,21 @@ public class FrontControllerCommand extends HttpServlet {
 		String type = request.getParameter("type");
 		Command command = null;
 		
-//------------------------------------------------실----------------------------------------------------------
+//------------------------------------------------민형----------------------------------------------------------
 		if ("order".equals(type)) {
 			command = new OrderCommand();
 		} else if ("view".equals(type)) {
 			command = new ViewCommand();
 		} else if ("write".equals(type)) {
 			command = new WriteCommand();
+		} else if("cardChk".equals(type)) {
+			command = new CardChkCommand();
+		} else if("goMypage".equals(type)) {
+			command = new GoMypageCommand(); 
+		} else if("myPoint".equals(type)) {
+			command = new MyPointCommand();
+		} else if("myBoard".equals(type)) {
+			command = new MyBoardCommand();
 //------------------------------------------------실----------------------------------------------------------
 		} else if("productlist".equals(type)) {
 			command = new productlistCommand();
@@ -72,9 +90,22 @@ public class FrontControllerCommand extends HttpServlet {
 			command = new goOrderlistCommand();
 		} else if("directBuy".equals(type)) {
 			command = new directBuyCommand();
-//------------------------------------------------실----------------------------------------------------------
+//------------------------------------------------은영----------------------------------------------------------
 		} else if("register".equals(type)) {
 			command = new RegisterCommand();
+//------------------------------------------------충진----------------------------------------------------------
+		} else if("viewSeller".equals(type)) {
+			command = new ViewSellerCommand();
+		} else if("sellerRegister".equals(type)) {
+			command = new SellerRegisterCommand();
+		} else if("shopRegister".equals(type)) {
+			command = new ShopRegisterCommand();
+		} else if("insertProduct".equals(type)) {
+			command = new InsertProductCommand();
+		} else if("insertProduct2".equals(type)) {
+			command = new InsertProduct2Command();
+		} else if("insertProduct3".equals(type)) {
+			command = new InsertProduct3Command();
 		}
 		String path = command.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);

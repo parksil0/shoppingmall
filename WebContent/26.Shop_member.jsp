@@ -25,8 +25,8 @@
     <div class="div_member">
         <table class="table_member">
             <tr>
-                <th>이름</th>
-                <td>
+                <th id="name_top">이름</th>
+                <td id="name_top">
                     <input type="text" id="m_text">
                 </td>
             </tr>
@@ -35,26 +35,32 @@
                 <td>
                     <select id="year">
                         <option>1992</option>
-                    </select>
-                </td>
-                <td>
+                        <option>1993</option>
+                        <option>1994</option>
+                        <option>1995</option>
+                        <option>1996</option>
+                    </select>&nbsp;년&nbsp;
+                    
                     <select id="month">
                         <option>12</option>
-                    </select>
-                </td>
-                <td>
+                        <option>11</option>
+                        <option>10</option>
+                        <option>9</option>
+                    </select>&nbsp;월&nbsp;
+                    
                     <select id="day">
                         <option>8</option>
-                    </select>
-                </td>
-                <td>
-                    <input type=checkbox>&nbsp;&nbsp;남
-                    <input type=checkbox>&nbsp;&nbsp;여
+                    </select>&nbsp;일&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="man" name="gender">
+                    <label for="man">남</label>&nbsp;&nbsp;
+                    <input type="radio" id="woman" name="gender">
+                    <label for="woman">여</label>
                 </td>
             </tr>
             <tr>
                 <th>아이디</th>
-                <td>podongEbi</td>
+                <td><b>podongEbi</b></td>
             </tr>
             <tr>
                 <th>비밀번호</th>
@@ -76,31 +82,37 @@
                         <option>011</option>
                         <option>016</option>
                         <option>017</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="text" id="m_text2">-
-                </td>
-                <td>
+                    </select>&nbsp;-&nbsp;
+                    
+                    <input type="text" id="m_text2">&nbsp;-&nbsp;
+                    
                     <input type="text" id="m_text2">
                 </td>
             </tr>
             <tr>
                 <th>이메일 주소</th>
                 <td>
-                    <input type="text" id="m_text">&nbsp;@&nbsp;<input type="text" id="m_text">
+                    <input type="text" id="m_text">@
+                            <input type="text" id="m_text" class="m_text">&nbsp;
+                    <select id="m_address">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="paran.com">paran.com</option>
+                        <option value="podong.com">podong.com</option>
+                    </select>
                 </td>
             </tr>
-            <tr>
+            <tr id="ad_hgt">
                 <th>주소</th>
-                <td>
-                    <input type="text" id="m_text3">
-                </td>
-                <br><br>
-                <th>상세주소</th>
-                <td>
-                    <input type="text" id="m_text3">
-                </td>
+                    <td>
+                        <div class="paybox">
+                            <input type="text" id="m_text3">
+                        </div>
+                        <div class="paybox">
+                            <input type="text" id="m_text3">&nbsp;(상세주소)
+                        </div>
+                    </td>
             </tr>
         </table>
     </div>
